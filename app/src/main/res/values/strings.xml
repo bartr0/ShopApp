@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">ShopApp</string>
+
+    <string name="phone1">Phone 1 is a super powerful phone</string>
+
+    <string name="phone2">Phone 2 is a super powerful phone</string>
+
+    <string name="phone3">Phone 3 is a super powerful phone</string>
+
+    <string name="phone4">Phone 4 is a super powerful phone</string>
+
+    <string name="phone5">Phone 5 is a super powerful phone</string>
+
+    <string name="phone6">Phone 6 is a super powerful phone</string>
+
+    <string name="phone7">Phone 7 is a super powerful phone</string>
+
+    <string name="phone8">Phone 8 is a super powerful phone</string>
+
+    <string name="phone9">Phone 9 is a super powerful phone</string>
+
+</resources>
