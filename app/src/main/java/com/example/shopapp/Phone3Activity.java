@@ -77,14 +77,14 @@ public class Phone3Activity extends AppCompatActivity implements LoaderManager.L
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    imageView.setImageResource(R.drawable.phone_white);
+                    imageView.setImageResource(R.drawable.phone3_white);
                 } else {
-                    imageView.setImageResource(R.drawable.phone);
+                    imageView.setImageResource(R.drawable.phone3);
                 }
             }
         });
 
-
+        imageView.setImageResource(R.drawable.phone3);
         phone_Name.setText("OnePlus 10");
         phone_Description.setText(R.string.phone3);
 

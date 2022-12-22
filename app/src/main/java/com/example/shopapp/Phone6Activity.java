@@ -21,7 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.shopapp.Database.OrderContract;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Phone1Activity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
+public class Phone6Activity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
     ImageView imageView;
     ImageButton plusquantity, minusquantity;
@@ -57,12 +57,14 @@ public class Phone1Activity extends AppCompatActivity implements LoaderManager.L
             switch (item.getItemId()) {
                 case R.id.action_home:
                     Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(Phone1Activity.this, MainActivity.class));
+                    startActivity(new Intent(Phone6Activity.this, MainActivity.class));
+                    overridePendingTransition(0, 0);
                     return true;
 
                 case R.id.action_cart:
                     Toast.makeText(this, "Cart", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(Phone1Activity.this, SummaryActivity.class));
+                    startActivity(new Intent(Phone6Activity.this, SummaryActivity.class));
+                    overridePendingTransition(0, 0);
                     return true;
 
                 case R.id.action_profile:
@@ -75,26 +77,26 @@ public class Phone1Activity extends AppCompatActivity implements LoaderManager.L
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    imageView.setImageResource(R.drawable.phone_white);
+                    imageView.setImageResource(R.drawable.phone6_white);
                 } else {
-                    imageView.setImageResource(R.drawable.phone);
+                    imageView.setImageResource(R.drawable.phone6);
                 }
             }
         });
 
 
-
-        phone_Name.setText("Nothing Phone 1");
-        phone_Description.setText(R.string.phone1);
+        imageView.setImageResource(R.drawable.phone6);
+        phone_Name.setText("Pixel 6 Pro");
+        phone_Description.setText(R.string.phone6);
 
         addtoCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (quantity == 0){
-                    Toast.makeText(Phone1Activity.this, "Select minimum 1 piece", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Phone6Activity.this, "Select minimum 1 piece", Toast.LENGTH_SHORT).show();
                 }
                 if (quantity>0){
-                    Intent intent = new Intent(Phone1Activity.this, SummaryActivity.class);
+                    Intent intent = new Intent(Phone6Activity.this, SummaryActivity.class);
                     startActivity(intent);
 
                     SaveCart();
@@ -106,7 +108,7 @@ public class Phone1Activity extends AppCompatActivity implements LoaderManager.L
         plusquantity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int basePrice = 470;
+                int basePrice = 699;
                 quantity++;
                 displayQuantity();
                 int phonePrice = basePrice * quantity;
@@ -123,9 +125,9 @@ public class Phone1Activity extends AppCompatActivity implements LoaderManager.L
             @Override
             public void onClick(View v) {
 
-                int basePrice = 470;
+                int basePrice = 699;
                 if (quantity < 1) {
-                    Toast.makeText(Phone1Activity.this, "Select minimum 1 piece", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Phone6Activity.this, "Select minimum 1 piece", Toast.LENGTH_SHORT).show();
                 } else {
                     quantity--;
                     displayQuantity();
@@ -183,7 +185,7 @@ public class Phone1Activity extends AppCompatActivity implements LoaderManager.L
 
     private int CalculatePrice(CheckBox addonEarbuds, CheckBox addonCharger) {
 
-        int basePrice = 470;
+        int basePrice = 699;
 
         if (addonEarbuds.isChecked()) {
             basePrice = basePrice + 150;

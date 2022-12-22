@@ -85,32 +85,20 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
                 context.startActivity(intent3);
             }
             if (position == 3) {
-                Intent intent2 = new Intent(context, Phone2Activity.class);
-                context.startActivity(intent2);
+                Intent intent4 = new Intent(context, Phone4Activity.class);
+                context.startActivity(intent4);
             }
             if (position == 4) {
-                Intent intent2 = new Intent(context, Phone2Activity.class);
-                context.startActivity(intent2);
+                Intent intent5 = new Intent(context, Phone5Activity.class);
+                context.startActivity(intent5);
             }
             if (position == 5) {
-                Intent intent2 = new Intent(context, Phone2Activity.class);
-                context.startActivity(intent2);
+                Intent intent6 = new Intent(context, Phone6Activity.class);
+                context.startActivity(intent6);
             }
             if (position == 6) {
-                Intent intent2 = new Intent(context, Phone2Activity.class);
-                context.startActivity(intent2);
-            }
-            if (position == 7) {
-                Intent intent2 = new Intent(context, Phone2Activity.class);
-                context.startActivity(intent2);
-            }
-            if (position == 8) {
-                Intent intent2 = new Intent(context, Phone2Activity.class);
-                context.startActivity(intent2);
-            }
-            if (position == 9) {
-                Intent intent2 = new Intent(context, Phone2Activity.class);
-                context.startActivity(intent2);
+                Intent intent7 = new Intent(context, Phone7Activity.class);
+                context.startActivity(intent7);
             }
         }
     }

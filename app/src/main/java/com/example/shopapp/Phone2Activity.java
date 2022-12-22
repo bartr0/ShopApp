@@ -78,14 +78,14 @@ public class Phone2Activity extends AppCompatActivity implements LoaderManager.L
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    imageView.setImageResource(R.drawable.phone_white);
+                    imageView.setImageResource(R.drawable.phone2_white);
                 } else {
-                    imageView.setImageResource(R.drawable.phone);
+                    imageView.setImageResource(R.drawable.phone2);
                 }
             }
         });
 
-
+        imageView.setImageResource(R.drawable.phone2);
         phone_Name.setText("OnePlus Nord");
         phone_Description.setText(R.string.phone2);
 
@@ -189,11 +189,11 @@ public class Phone2Activity extends AppCompatActivity implements LoaderManager.L
         int basePrice = 300;
 
         if (addonEarbuds.isChecked()) {
-            basePrice = basePrice + 100;
+            basePrice = basePrice + 150;
         }
 
         if (addonCharger.isChecked()) {
-            basePrice = basePrice + 25;
+            basePrice = basePrice + 35;
         }
 
         return basePrice * quantity;

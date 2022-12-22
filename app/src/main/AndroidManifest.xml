@@ -24,6 +24,38 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".Phone7Activity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Phone6Activity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Phone5Activity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Phone4Activity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Phone3Activity"
             android:exported="false"
             android:parentActivityName=".MainActivity">
