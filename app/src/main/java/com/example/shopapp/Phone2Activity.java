@@ -20,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.shopapp.Database.OrderContract;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Phone2Activity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
@@ -29,6 +30,7 @@ public class Phone2Activity extends AppCompatActivity implements LoaderManager.L
     CheckBox addCharger, addEarbuds;
     RadioButton white, black;
     Button addtoCart;
+    BottomNavigationView nav;
     int quantity;
     public Uri mCurrentCartUri;
     boolean hasAllRequiredValues = false;
@@ -50,6 +52,27 @@ public class Phone2Activity extends AppCompatActivity implements LoaderManager.L
         addEarbuds = findViewById(R.id.extraEarbuds);
         white = findViewById(R.id.whiteRadioButton);
         black = findViewById(R.id.blackRadioButton);
+        nav = findViewById(R.id.nav_phones);
+
+        nav.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.action_home:
+                    Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(Phone2Activity.this, MainActivity.class));
+                    overridePendingTransition(0, 0);
+                    return true;
+
+                case R.id.action_cart:
+                    Toast.makeText(this, "Cart", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(Phone2Activity.this, SummaryActivity.class));
+                    overridePendingTransition(0, 0);
+                    return true;
+
+                case R.id.action_profile:
+                    Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
+            }
+            return false;
+        });
 
         white.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -69,11 +92,15 @@ public class Phone2Activity extends AppCompatActivity implements LoaderManager.L
         addtoCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Phone2Activity.this, SummaryActivity.class);
-                startActivity(intent);
+                if (quantity < 0){
+                    Toast.makeText(Phone2Activity.this, "Select minimum 1 piece", Toast.LENGTH_SHORT).show();
+                }
+                if (quantity>0){
+                    Intent intent = new Intent(Phone2Activity.this, SummaryActivity.class);
+                    startActivity(intent);
 
-
-                SaveCart();
+                    SaveCart();
+                }
             }
         });
 
@@ -99,7 +126,7 @@ public class Phone2Activity extends AppCompatActivity implements LoaderManager.L
             public void onClick(View v) {
 
                 int basePrice = 300;
-                if (quantity == 0) {
+                if (quantity < 0) {
                     Toast.makeText(Phone2Activity.this, "Select minimum 1 piece", Toast.LENGTH_SHORT).show();
                 } else {
                     quantity--;

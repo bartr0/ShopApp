@@ -1,9 +1,14 @@
 package com.example.shopapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,12 +18,34 @@ public class MainActivity extends AppCompatActivity {
     List<Model> modelList;
     RecyclerView recyclerView;
     OrderAdapter mAdapter;
+    BottomNavigationView nav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        nav = findViewById(R.id.nav);
+
+        nav.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.action_home:
+                    Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(MainActivity.this, MainActivity.class));
+                    overridePendingTransition(0, 0);
+                    return true;
+
+                case R.id.action_cart:
+                    Toast.makeText(this, "Cart", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(MainActivity.this, SummaryActivity.class));
+                    overridePendingTransition(0, 0);
+                    return true;
+
+                case R.id.action_profile:
+                    Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
+            }
+            return false;
+        });
 
         modelList = new ArrayList<>();
         modelList.add(new Model("Nothing Phone 1", getString(R.string.phone1), "470$", R.drawable.phone ));
