@@ -92,7 +92,7 @@ public class Phone2Activity extends AppCompatActivity implements LoaderManager.L
         addtoCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (quantity < 0){
+                if (quantity == 0){
                     Toast.makeText(Phone2Activity.this, "Select minimum 1 piece", Toast.LENGTH_SHORT).show();
                 }
                 if (quantity>0){
@@ -126,7 +126,7 @@ public class Phone2Activity extends AppCompatActivity implements LoaderManager.L
             public void onClick(View v) {
 
                 int basePrice = 300;
-                if (quantity < 0) {
+                if (quantity < 1) {
                     Toast.makeText(Phone2Activity.this, "Select minimum 1 piece", Toast.LENGTH_SHORT).show();
                 } else {
                     quantity--;

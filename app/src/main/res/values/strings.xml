@@ -18,5 +18,14 @@
     <string name="phone8">Phone 8 is a super powerful phone</string>
 
     <string name="phone9">Phone 9 is a super powerful phone</string>
+    <string name="title_activity_sign">SignActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
 
 </resources>

@@ -49,8 +49,8 @@ public class SummaryActivity extends AppCompatActivity implements LoaderManager.
 
 
         Button clearthedata = findViewById(R.id.clearthedatabase);
-
         clearthedata.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 int deletethedata = getContentResolver().delete(OrderContract.OrderEntry.CONTENT_URI, null, null);
@@ -62,8 +62,6 @@ public class SummaryActivity extends AppCompatActivity implements LoaderManager.
         ListView listView = findViewById(R.id.list);
         mAdapter = new CartAdapter(this, null);
         listView.setAdapter(mAdapter);
-
-
 
     }
 

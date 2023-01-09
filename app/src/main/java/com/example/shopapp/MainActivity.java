@@ -30,16 +30,19 @@ public class MainActivity extends AppCompatActivity {
         nav.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.action_home:
+
                     Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(MainActivity.this, MainActivity.class));
                     return true;
 
                 case R.id.action_cart:
+
                     Toast.makeText(this, "Cart", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(MainActivity.this, SummaryActivity.class));
                     return true;
 
                 case R.id.action_profile:
+
                     Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
             }
             return false;
@@ -51,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
         modelList.add(new Model("OnePlus 10", getString(R.string.phone3), "699$", R.drawable.phone3));
         modelList.add(new Model("Samsung S20 FE", getString(R.string.phone4), "550$", R.drawable.phone4));
         modelList.add(new Model("Nokia 3310", getString(R.string.phone5), "50$", R.drawable.phone5));
-        modelList.add(new Model("Pixel 6 Pro", getString(R.string.phone8), "699$", R.drawable.phone6));
-        modelList.add(new Model("Vertu Ferrari Edition", getString(R.string.phone9), "999$", R.drawable.phone7));
+        modelList.add(new Model("Pixel 6 Pro", getString(R.string.phone6), "699$", R.drawable.phone6));
+        modelList.add(new Model("Vertu Ferrari Edition", getString(R.string.phone7), "999$", R.drawable.phone7));
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(null));

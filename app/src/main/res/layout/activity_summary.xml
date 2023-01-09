@@ -44,17 +44,29 @@
 
     </androidx.cardview.widget.CardView>
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="450px"
         android:layout_height="wrap_content"
-        android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
+        android:layout_marginRight="9px"
         android:layout_marginBottom="65dp"
-        android:layout_centerInParent="true"
         android:text="Remove Your Cart"
         android:textColor="@android:color/white"
         android:background="@android:color/holo_red_dark"
         android:id="@+id/clearthedatabase"
         android:layout_alignParentBottom="true"/>
+    <Button
+        android:layout_width="450px"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="65dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="9px"
+        android:layout_toRightOf="@+id/clearthedatabase"
+        android:text="Buy selected items"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_red_dark"
+        android:id="@+id/buyButton"
+        android:layout_alignParentBottom="true"/>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_summary"
         android:layout_width="match_parent"
